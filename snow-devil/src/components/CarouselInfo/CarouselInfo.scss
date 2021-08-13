@@ -1,0 +1,78 @@
+@import '../../styles/Ultimate-Config.scss';
+@import '../../styles/Variables.scss';
+
+.hero__slide__1 {
+
+    overflow: hidden;
+
+    &__text {
+        .col {
+            padding-right: 5rem;
+
+            .hero__slide__1__title {
+                display: inline;
+                background-color: $main-blue;
+                color: white;
+                font-size: $Headline-4 + 0.3rem;
+                text-align: left;
+                text-transform: uppercase;
+                font-family: $unica-font;
+                font-weight: 500;
+                letter-spacing: 1px;
+                line-height: 1.35;
+                padding: 0 1.5rem;
+                box-decoration-break: clone;
+            }
+        }
+
+    }
+
+    &__cta {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+
+        .carousel__btn {
+            background-color: $main-black;
+            opacity: 0.8;
+            border: none;
+            margin: 0;
+            padding: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 0px;
+            margin-right: 5px;
+            transition: all 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            .carousel__icon {
+                width: 20px;
+            }
+        }
+
+        .hero__slide__1__shopping {
+            display: flex;
+            padding: 0 2rem;
+            height: 40px;
+            align-items: center;
+            background-color: $main-black;
+            color: white;
+            border: none;
+            margin: 0;
+            border-radius: 0px;
+            transition: all 0.3s;
+            font-family: $karla-font;
+            font-weight: 500;
+            font-size: $Body;
+
+            &:hover {
+                word-spacing: 2px;
+                background-color: lighten($color: $main-black, $amount: 10%);
+
+            }
+        }
+    }
+}

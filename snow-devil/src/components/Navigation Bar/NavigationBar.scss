@@ -1,0 +1,28 @@
+@import '../../styles/Ultimate-Config.scss';
+@import '../../styles/Variables.scss';
+
+.navigation__bar {
+    height: 70px;
+    width: 100%;
+    background-color: $main-black;
+
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .navigation__menu {
+            width: 30px;
+        }
+
+        .navigation__logo {
+            width: 150px;
+        }
+
+        .navigation__shoppingCart {
+            width: 30px;
+        }
+    }
+}
