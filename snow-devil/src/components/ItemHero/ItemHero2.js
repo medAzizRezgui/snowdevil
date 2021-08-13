@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './ItemHero.module.scss'
+import classes from './ItemHero2.module.scss'
 function ItemHero(props) {
     return (
         <div className={classes.item__hero}>

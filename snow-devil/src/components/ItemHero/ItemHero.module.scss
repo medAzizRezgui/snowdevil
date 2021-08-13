@@ -1,0 +1,60 @@
+@import '../../styles/Ultimate-Config.scss';
+@import '../../styles/Variables.scss';
+
+.item__hero {
+    background: url('../../assets/item__hero1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    z-index: -2;
+    max-width: 400px;
+    cursor: pointer;
+
+
+    .item__modal {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: all 0.3s;
+        z-index: -1;
+        background-color: rgba(0, 0, 0, 0.377);
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.644);
+
+        }
+
+    }
+
+    &__title {
+        text-align: left;
+        color: white;
+        padding: 0 1rem;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-family: $unica-font;
+        display: inline-block;
+        background-color: $main-blue;
+        font-weight: normal;
+        font-size: $Headline-4;
+        margin-bottom: 1rem;
+
+    }
+
+    &__subtitle {
+        display: block;
+        color: white;
+        text-transform: uppercase;
+        font-family: $karla-font;
+        font-weight: bold;
+        margin-bottom: 3rem;
+        padding-left: 1rem;
+        letter-spacing: 1px;
+    }
+}

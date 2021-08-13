@@ -6,9 +6,7 @@
     flex-direction: column;
     align-items: center;
     transition: all 0.3s;
-    padding: 2rem 0;
     background-color: $gray-bg;
-    margin: 2rem 0;
 
     &:hover {
         background-color: rgb(224, 224, 224);
@@ -21,6 +19,7 @@
         font-weight: $font-Normal;
         font-size: $Headline-4;
         margin-bottom: 0rem;
+        margin-top: 3rem;
     }
 
     .item__subtitle {
@@ -34,5 +33,8 @@
 
     }
 
-    .item__image {}
+    .item__image {
+        max-width: 300px;
+        margin-bottom: 3rem;
+    }
 }
