@@ -7,8 +7,6 @@
 
     &__text {
         .col {
-            padding-right: 5rem;
-
             .hero__slide__1__title {
                 display: inline;
                 background-color: $main-blue;
@@ -24,7 +22,6 @@
                 box-decoration-break: clone;
             }
         }
-
     }
 
     &__cta {

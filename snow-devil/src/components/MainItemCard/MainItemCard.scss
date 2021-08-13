@@ -1,0 +1,38 @@
+@import '../../styles/Ultimate-Config.scss';
+@import '../../styles/Variables.scss';
+
+.item__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s;
+    padding: 2rem 0;
+    background-color: $gray-bg;
+    margin: 2rem 0;
+
+    &:hover {
+        background-color: rgb(224, 224, 224);
+    }
+
+    .item__title {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $unica-font;
+        font-weight: $font-Normal;
+        font-size: $Headline-4;
+        margin-bottom: 0rem;
+    }
+
+    .item__subtitle {
+        text-transform: uppercase;
+        font-family: $karla-font;
+        font-weight: $font-Bold;
+        font-size: $Body;
+        color: $main-blue;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+    }
+
+    .item__image {}
+}

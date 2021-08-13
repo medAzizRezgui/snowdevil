@@ -250,7 +250,10 @@ html {
     font-size: 10px;
 }
 
+.section {
+    background-color: $gray-bg;
 
+}
 
 body {
     font-size: $Body;
@@ -258,6 +261,7 @@ body {
     font-weight: $font-Normal;
     font-family: $inter-font;
     color: #222;
+    background-color: $gray-bg;
 }
 
 ul {
