@@ -1,0 +1,98 @@
+@import './styles/Ultimate-Config.scss';
+@import './styles/Variables.scss';
+
+
+.carousel__body {
+    border: 2px solid black;
+    width: 550px;
+    margin: 0 auto;
+
+}
+
+.slider__body {
+    height: 300px;
+
+
+}
+
+.carousel__master-spinner-container {
+    background: white !important;
+}
+
+.slide__item {}
+
+.dot {
+    border: 1px solid springgreen;
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+
+}
+
+.carousel__dot--selected {
+    background-color: springgreen
+}
+
+.card {
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 450px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: rgb(11, 147, 226);
+    padding: 0 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.btn {
+    position: absolute;
+    height: 100%;
+    border: none;
+    width: 40px;
+    font-size: 20px;
+    background: rgb(7, 94, 145);
+
+}
+
+.next {
+    right: 0;
+
+}
+
+.back {
+    left: 0;
+}
+
+.slide {
+    animation: slide 1s ease-in-out;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.newSlide {
+
+
+    transition: 1s ease;
+
+}
