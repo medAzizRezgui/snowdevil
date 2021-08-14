@@ -1,0 +1,96 @@
+@import '../../styles/Variables.scss';
+
+.side__nav {
+    position: fixed;
+    height: 100vh;
+    width: 70%;
+    background: $gray-bg;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1rem;
+    animation: drawer 0.5s ease-in-out;
+
+    .search__bar {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .drawer__search {
+            width: 100%;
+            height: 35px;
+            border: none;
+            padding: 2rem 1rem;
+            font-family: $karla-font;
+            font-size: $Paragraph-2;
+        }
+
+        .search__icon {
+            position: absolute;
+            width: 18px;
+            right: 1rem;
+        }
+    }
+
+    .drawer__list {
+        .drawer__item {
+            width: 100%;
+            background: white;
+            padding: 1rem;
+            color: $main-black;
+            font-family: $unica-font;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: $Paragraph-1;
+            margin: 5px 0;
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.212);
+    top: 0;
+    left: 0;
+    z-index: 90;
+    animation: modal 0.5s ease-in-out;
+
+}
+
+.show__drawer {
+    display: block;
+}
+
+.hide__drawer {
+    display: none;
+}
+
+@keyframes drawer {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+}
+
+@keyframes modal {
+    0% {
+
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+}

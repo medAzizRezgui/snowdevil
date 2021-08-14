@@ -6,13 +6,12 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
     position: relative;
-    z-index: -2;
+    z-index: 55;
     max-width: 400px;
     cursor: pointer;
 
@@ -22,14 +21,13 @@
         height: 100%;
         position: absolute;
         transition: all 0.3s;
-        z-index: -1;
+        z-index: 50;
         background-color: rgba(0, 0, 0, 0.377);
+    }
 
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.644);
-
-        }
-
+    .item__modal:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.566)
     }
 
     &__title {
@@ -44,11 +42,13 @@
         background-color: $main-blue;
         font-weight: normal;
         font-size: $Paragraph-1;
+        z-index: 80;
 
         margin-bottom: 1rem;
     }
 
     &__subtitle {
+        z-index: 80;
         display: block;
         color: white;
         text-transform: uppercase;
