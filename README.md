@@ -1,7 +1,5 @@
 # snowdevil
 
-**Fonts**
+My biggest project yet, a shopping website !!
 
-
-**Colors**
-
+note : i'll update the readme when i finish
