@@ -18,9 +18,15 @@
             cursor: pointer;
         }
 
-        .navigation__logo {
-            width: 150px;
+        .logo__link {
+            height: 25px;
+
+            .navigation__logo {
+                width: 150px;
+                height: 25px;
+            }
         }
+
 
         .navigation__shoppingCart {
             width: 30px;

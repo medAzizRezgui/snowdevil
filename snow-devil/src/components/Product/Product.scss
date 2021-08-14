@@ -1,15 +1,13 @@
-@import '../../styles/Ultimate-Config.scss';
 @import '../../styles/Variables.scss';
 
 
 .product__container {
     background-color: white;
-
+    transition: all ease-in-out;
+    animation: pop 0.5s ease-in-out forwards;
 
     .product__image {
         padding-top: 3rem;
-
-        img {}
     }
 
     .product {
@@ -40,8 +38,8 @@
         }
 
         .product__cta {
-            .row {
-                .col-6 {
+            .my__row {
+                .my__col {
                     padding: 0 1rem;
 
                     .product__cta__label {
@@ -71,7 +69,7 @@
                     }
                 }
 
-                .col-6 {
+                .my__col {
                     .product__cta__count {
                         display: flex;
                         align-items: center;
@@ -138,7 +136,6 @@
                     background-color: darken($color: $main-blue, $amount: 10%);
                 }
             }
-
         }
     }
 
@@ -146,11 +143,26 @@
         padding: 3rem 0;
 
         .desc__list {
-            li {
+            .desc__list__item {
                 list-style-type: disc;
                 color: rgb(77, 77, 77);
+                font-family: $karla-font;
+                font-weight: 500;
+                font-size: $Body;
             }
         }
     }
 
+}
+
+@keyframes pop {
+    0% {
+
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+
+    }
 }

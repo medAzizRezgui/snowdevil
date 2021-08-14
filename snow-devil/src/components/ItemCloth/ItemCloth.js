@@ -8,7 +8,7 @@ function ItemCloth(props) {
             <span className="item__cloth__price">${props.price}</span>
             <span className={props.sale ? 'item__cloth__sale' : null}>{props.sale ? 'Sale' : ''}</span>
             <div className={"item__cloth__modal"}>
-                <a href="/" className='view__more'>View </a>
+                <a href="/product" className='view__more'>View </a>
             </div>
         </div>
     )

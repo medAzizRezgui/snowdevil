@@ -20,22 +20,22 @@ function Product() {
 
 
                 <div className="product__cta">  {/* Gray Box */}
-                    <div className="row row-cols-2 row-cols-sm-3">
-                        <div className="col-6 col-sm-5">
+                    <div className="row row-cols-2 row-cols-sm-3 my__row">
+                        <div className="col-6 col-sm-5 my__col">
                             <p className="product__cta__label">size</p>
                             <select className="product__cta__select">
                                 <option value="" className='product__cta__option'>Small</option>
                                 <option value="" className='product__cta__option'>Large</option>
                             </select>
                         </div>
-                        <div className="col-6 col-sm-5">
+                        <div className="col-6 col-sm-5 my__col">
                             <p className="product__cta__label">Color</p>
                             <select className="product__cta__select">
                                 <option value="" className='product__cta__option'>Red</option>
                                 <option value="" className='product__cta__option'>Blue</option>
                             </select>
                         </div>
-                        <div className="col-6 col-sm-2">
+                        <div className="col-6 col-sm-2 my__col">
                             <p className="product__cta__label">Quantity</p>
                             <div className="product__cta__count">
                                 <p className='count__minus' onClick={() => setcount(count - 1)}>-</p>
@@ -53,11 +53,11 @@ function Product() {
             </div>
             <div className="product__description">
                 <ul className="desc__list">
-                    <li>
+                    <li className='desc__list__item'>
                         Mapped with 3M™ Thinsulate™ Insulation [40G Body / Sleeves / Hood]
                     </li>
-                    <li>Embossed Taffeta Lining</li>
-                    <li>DRYRIDE Durashell™ 2-Layer Oxford Fabric [10,000MM, 5,000G]</li>
+                    <li className='desc__list__item'>Embossed Taffeta Lining</li>
+                    <li className='desc__list__item'>DRYRIDE Durashell™ 2-Layer Oxford Fabric [10,000MM, 5,000G]</li>
                 </ul>
             </div>
         </div>

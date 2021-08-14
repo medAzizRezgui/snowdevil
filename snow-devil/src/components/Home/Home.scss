@@ -2,5 +2,7 @@
 @import '../../styles/Variables.scss';
 
 .home__section {
+
+    animation: pop 0.5s ease-in-out forwards;
     transform: translateY(-20px);
 }
