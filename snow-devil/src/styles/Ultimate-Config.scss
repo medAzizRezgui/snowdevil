@@ -84,11 +84,11 @@ $columns: 12;
 @include md {
     @for $i from 1 through $columns {
         .col-md-#{$i} {
-            flex: 0 0 100% / $columns * $i;
+            flex: 0 0 100% / $columns * $i !important;
         }
 
         .col-md-offset-#{$i} {
-            margin-left: 100% / $columns * $i;
+            margin-left: 100% / $columns * $i !important;
         }
     }
 

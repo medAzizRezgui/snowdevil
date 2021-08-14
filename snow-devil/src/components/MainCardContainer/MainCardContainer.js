@@ -6,21 +6,23 @@ import Boots from '../../assets/home__boot.png';
 import './MainCardContainer.scss';
 function MainCardContainer() {
     return (
-        <div className="container main__item__container">
-            <div className="cards row row-cols-1 row-col-sm-1  row-cols-md-3 ">
-                <div className="col-12 col-md-3">
+        <div className="container">
+
+
+            <div className="cards row row-col-md-4 ">
+                <div className="col-12 col-md-4 stretch">
                     <MainItemCard
                         title={'snowboard'}
                         image={Board}
                     />
                 </div>
-                <div className="col-12 col-md-3">
+                <div className="col-12 col-md-4 stretch">
                     <MainItemCard
                         title={'ski'}
                         image={Boots}
                     />
                 </div>
-                <div className="col-12 col-md-3">
+                <div className="col-12 col-md-4 stretch">
                     <MainItemCard
                         title={'accessories'}
                         image={Hat}
@@ -28,6 +30,7 @@ function MainCardContainer() {
                 </div>
             </div>
         </div>
+
     )
 }
 

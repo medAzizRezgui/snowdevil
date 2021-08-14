@@ -1,10 +1,25 @@
 @import '../../styles/Variables.scss';
 
+.popup {
+    color: white;
+    background: $main-blue;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    opacity: 0;
+    top: 0px;
+    animation: popup 3s ease-in-out forwards;
+}
 
 .product__container {
     background-color: white;
+
     // transition: all ease-in-out;
-  // animation: pop 0.5s ease-in-out forwards;
+    // animation: pop 0.5s ease-in-out forwards;
+
 
     .product__image {
         padding-top: 3rem;
@@ -164,5 +179,28 @@
     100% {
         opacity: 1;
 
+    }
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+        transform: translateY(-100%);
     }
 }
