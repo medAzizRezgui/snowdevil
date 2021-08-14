@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import CartContext from '../../context/Cart-context/cart-context';
 import ItemCloth from '../ItemCloth/ItemCloth';
+import { Link } from 'react-router-dom'
 import './Cart.scss'
 function Cart() {
 
@@ -10,7 +11,10 @@ function Cart() {
         cartState =
             <>
                 <p className="cart__state">your cart is currently empty</p>
-                <p className="cart__empty__btn">continue browsing</p>
+                <Link to='/'>
+                    <p className="cart__empty__btn">continue browsing</p>
+
+                </Link>
             </>
     }
     else {

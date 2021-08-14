@@ -13,11 +13,11 @@ import {
 } from "react-router-dom";
 function App() {
   return (
+    <CartState>
+      <Router>
 
-    <Router>
+        <NavigationBar />
 
-      <NavigationBar />
-      <CartState>
         <Switch>
           <Route path="/cart">
             <Cart />
@@ -32,9 +32,9 @@ function App() {
         </Switch>
 
 
-      </CartState>
-    </Router>
 
+      </Router>
+    </CartState>
 
   );
 }

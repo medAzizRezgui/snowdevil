@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import Jacket from '../../assets/jacket1.png'
 import CartContext from '../../context/Cart-context/cart-context';
 import Jacket1 from '../../assets/jacket1.png';
-
+import { Link } from 'react-router-dom'
 import './Product.scss'
 function Product() {
     const items = [
@@ -49,7 +49,10 @@ function Product() {
     }
     return (
         <>
-            {popup}
+            <Link to='/cart'>
+                {popup}
+            </Link>
+
             <div className='container product__container'> {/* Green Box */}
 
                 <div className="product__image" > {/* Red Box */}
