@@ -44,7 +44,13 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: $Paragraph-1;
-            margin: 5px 0;
+            margin: 7px 0;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
         }
     }
 }

@@ -1,0 +1,156 @@
+@import '../../styles/Ultimate-Config.scss';
+@import '../../styles/Variables.scss';
+
+
+.product__container {
+    background-color: white;
+
+
+    .product__image {
+        padding-top: 3rem;
+
+        img {}
+    }
+
+    .product {
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .product__info {
+            text-align: center;
+            margin-bottom: 2rem;
+
+            .product__title {
+                font-size: $Headline-4;
+                font-family: $unica-font;
+                text-transform: uppercase;
+                font-weight: $font-Medium;
+                letter-spacing: 1px;
+                color: $main-black;
+                margin-bottom: 0;
+            }
+
+            .product__price {
+                color: rgb(105, 105, 105);
+                font-size: $Paragraph-2;
+                font-family: $karla-font;
+            }
+        }
+
+        .product__cta {
+            .row {
+                .col-6 {
+                    padding: 0 1rem;
+
+                    .product__cta__label {
+                        font-family: $karla-font;
+                        text-transform: uppercase;
+                        font-size: $Body;
+                        font-weight: bold;
+                        color: rgb(105, 105, 105);
+                        margin-bottom: 1rem;
+                    }
+
+                    .product__cta__select {
+                        height: 35px;
+                        padding: 0 1rem;
+                        margin-bottom: 1rem;
+                        border: 0;
+                        border-radius: 0;
+                        background-color: $gray-bg;
+                        font-family: $karla-font;
+                        font-size: $Paragraph-2 - 0.4rem;
+                        width: 100%;
+                    }
+
+                    .product__cta__option {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+
+                .col-6 {
+                    .product__cta__count {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 2rem;
+
+
+                        .count__minus,
+                        .count__plus {
+                            background-color: $gray-bg;
+                            width: 30px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 35px;
+                            cursor: pointer;
+                            width: 100%;
+                        }
+
+                        .count {
+
+                            background-color: $gray-bg;
+                            height: 35px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 30px;
+                            border-left: 1px solid rgba(128, 128, 128, 0.438);
+                            border-right: 1px solid rgba(128, 128, 128, 0.452);
+                            width: 100%;
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        .product__buy__btns {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+
+            .add__to__cart,
+            .buy__it__now {
+                width: 100%;
+                text-transform: uppercase;
+                font-family: $karla-font;
+                letter-spacing: 1px;
+                font-weight: $font-Bold;
+            }
+
+            .add__to__cart {
+                border: 1.5px solid $main-blue;
+                color: $main-blue;
+            }
+
+            .buy__it__now {
+                background-color: $main-blue;
+                color: white;
+                border: 1px solid $main-blue;
+
+                &:hover {
+                    background-color: darken($color: $main-blue, $amount: 10%);
+                }
+            }
+
+        }
+    }
+
+    .product__description {
+        padding: 3rem 0;
+
+        .desc__list {
+            li {
+                list-style-type: disc;
+                color: rgb(77, 77, 77);
+            }
+        }
+    }
+
+}

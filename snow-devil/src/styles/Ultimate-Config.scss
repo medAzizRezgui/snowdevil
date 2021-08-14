@@ -50,22 +50,22 @@ $columns: 12;
 
 @for $i from 1 through $columns {
     .col-#{$i} {
-        flex: 0 0 100% / $columns * $i;
+        flex: 0 0 100% / $columns * $i !important;
     }
 
     .col-offset-#{$i} {
-        margin-left: 100% / $columns * $i;
+        margin-left: 100% / $columns * $i !important;
     }
 }
 
 @include sm {
     @for $i from 1 through $columns {
         .col-sm-#{$i} {
-            flex: 0 0 100% / $columns * $i;
+            flex: 0 0 100% / $columns * $i !important;
         }
 
         .col-sm-offset-#{$i} {
-            margin-left: 100% / $columns * $i;
+            margin-left: 100% / $columns * $i !important;
         }
     }
 
