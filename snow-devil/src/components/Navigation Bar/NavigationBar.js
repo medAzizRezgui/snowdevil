@@ -17,8 +17,10 @@ function NavigationBar() {
                 <Link to='/' className='logo__link'>
                     <img src='https://cdn.shopify.com/s/files/1/0938/8938/files/logo_3_165x@2x.png?v=1516999166' alt="logo" className="navigation__logo" />
                 </Link>
+                <Link to='/cart'>
+                    <img src={ShoppingCart} alt="shopping cart" className="navigation__shoppingCart" />
+                </Link>
 
-                <img src={ShoppingCart} alt="shopping cart" className="navigation__shoppingCart" />
             </div>
             <Drawer show={show}
                 close={() => setShow(false)}

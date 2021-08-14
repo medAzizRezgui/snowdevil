@@ -1,9 +1,39 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ItemHero from '../ItemHero/ItemHero';
 import ItemCloth from '../ItemCloth/ItemCloth';
-import Jacket1 from '../../assets/jacket1.png'
+import Jacket1 from '../../assets/jacket1.png';
+import CartContext from '../../context/Cart-context/cart-context';
 import './ItemContainer.scss';
 function ItemContainer() {
+
+    const { addToCart, cart } = useContext(CartContext);
+
+    const items = [
+        {
+            title: 'Campus',
+            sale: false,
+            price: 132.90,
+            img: Jacket1,
+            id: 1
+        },
+        {
+            title: 'Campus',
+            sale: false,
+            price: 132.90,
+            img: Jacket1,
+            id: 2
+        },
+        {
+            title: 'Campus',
+            sale: true,
+            price: 132.90,
+            img: Jacket1,
+            id: 3
+        }
+    ]
+
+
+
 
 
     return (
@@ -13,30 +43,24 @@ function ItemContainer() {
                     <ItemHero
                         title={'jackets'} />
                 </div>
-                <div className="col-6">
-                    <ItemCloth
-                        title={'Campus'}
-                        sale={false}
-                        price={132.90}
-                        img={Jacket1}
-                    />
-                </div>
-                <div className="col-6">
-                    <ItemCloth
-                        title={'Campus'}
-                        sale={false}
-                        price={132.90}
-                        img={Jacket1}
-                    />
-                </div>
-                <div className="col-6">
-                    <ItemCloth
-                        title={'Campus'}
-                        sale={true}
-                        price={132.90}
-                        img={Jacket1}
-                    />
-                </div>
+                {items.map((item, i) => (
+                    <div
+                        key={i + 342}
+                        className="col-6">
+                        <ItemCloth
+                            title={item.title}
+                            sale={item.sale}
+                            price={item.price}
+                            img={item.img}
+                            id={item.id + 1}
+                            key={i}
+
+                        >
+                        </ItemCloth>
+                    </div>
+                )
+
+                )}
 
             </div>
         </div>

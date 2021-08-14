@@ -1,11 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Jacket from '../../assets/jacket1.png'
+import CartContext from '../../context/Cart-context/cart-context';
+import Jacket1 from '../../assets/jacket1.png';
+
 import './Product.scss'
 function Product() {
-    const [count, setcount] = useState(1)
+    const items = [
+        {
+            title: 'Campus',
+            sale: false,
+            price: 132.90,
+            img: Jacket1,
+            id: 1
+        },
+        {
+            title: 'Campus',
+            sale: false,
+            price: 132.90,
+            img: Jacket1,
+            id: 2
+        },
+        {
+            title: 'Campus',
+            sale: true,
+            price: 132.90,
+            img: Jacket1,
+            id: 3
+        }
+    ]
+    const { addToCart, cart } = useContext(CartContext);
 
-    if (count < 1) {
-        setcount(1)
+    // const [count, setcount] = useState(1)
+
+    // if (count < 1) {
+    //     setcount(1)
+    // }
+
+    const addToCartHandler = (item) => {
+
+        addToCart(item);
+
     }
     return (
         <div className='container product__container'> {/* Green Box */}
@@ -38,16 +72,18 @@ function Product() {
                         <div className="col-6 col-sm-2 my__col">
                             <p className="product__cta__label">Quantity</p>
                             <div className="product__cta__count">
-                                <p className='count__minus' onClick={() => setcount(count - 1)}>-</p>
-                                <p className={'count'}>{count}</p>
-                                <p className='count__plus' onClick={() => setcount(count + 1)}>+</p>
+                                <p className='count__minus' >-</p>
+                                <p className={'count'}>1</p>
+                                <p className='count__plus' >+</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* Gray Box */}
                 <div className="product__buy__btns">
-                    <button className="add__to__cart">add to cart</button>
+                    <button
+                        onClick={() => addToCartHandler(items[1])}
+                        className="add__to__cart">add to cart</button>
                     <button className="buy__it__now">buy it now</button>
                 </div>
             </div>

@@ -1,0 +1,36 @@
+@import '../../styles/Variables.scss';
+
+.cart__container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .cart__title {
+        font-family: $unica-font;
+        font-size: $Headline-4;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+
+    .cart__state {
+        font-family: $karla-font;
+        font-size: $Body;
+        color: gray;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    .cart__empty__btn {
+        color: white;
+        font-family: $karla-font;
+        font-size: $Paragraph-2;
+        background-color: $main-blue;
+        padding: 1rem 5rem;
+        margin-bottom: 2rem;
+    }
+}
