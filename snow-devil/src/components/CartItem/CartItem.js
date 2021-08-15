@@ -4,7 +4,7 @@ import CartContext from '../../context/Cart-context/cart-context'
 
 function CartItem(props) {
     const { deleteItem } = useContext(CartContext);
-    console.log(deleteItem(props.id));
+
     return (
         <div
 
@@ -13,7 +13,7 @@ function CartItem(props) {
             <h4 className="cart__item__title">{props.title}</h4>
             <span className="cart__item__price">${props.price}</span>
             <span
-                onClick={deleteItem(props.id)}
+                onClick={() => deleteItem(props.id)}
                 className="remove__cart__item">Delete</span>
 
         </div>

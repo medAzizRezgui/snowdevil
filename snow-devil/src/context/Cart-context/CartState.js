@@ -18,7 +18,7 @@ const CartState = (props) => {
     // Delete a todo
     const deleteItem = (itemID) => {
         dispatch({
-            type: 'DELETE_FROM_CART',
+            type: 'REMOVE_FROM_CART',
             payload: itemID,
         });
     };
