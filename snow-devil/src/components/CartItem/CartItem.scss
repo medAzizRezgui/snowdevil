@@ -1,0 +1,40 @@
+@import '../../styles/Variables.scss';
+
+.cart__item__row {
+    width: 100%;
+
+
+    .cart__item {
+        display: flex;
+
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        gap: 10px;
+
+        .cart__item__image {
+            width: 50px;
+        }
+
+        .cart__item__title {
+            margin: 0;
+            font-size: $Paragraph-2;
+        }
+
+        .cart__item__price {
+            margin: 0;
+        }
+
+        .remove__cart__item {
+            font-family: $unica-font;
+            color: red;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: $Paragraph-2;
+            margin-left: auto;
+            cursor: pointer;
+        }
+    }
+}

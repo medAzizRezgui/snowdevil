@@ -15,11 +15,19 @@ const CartState = (props) => {
             payload: item,
         })
     }
+    // Delete a todo
+    const deleteItem = (itemID) => {
+        dispatch({
+            type: 'DELETE_FROM_CART',
+            payload: itemID,
+        });
+    };
     return (
         <CartContext.Provider
             value={{
                 cart: state.cart,
                 addToCart,
+                deleteItem
             }}
         >
             {props.children}
