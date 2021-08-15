@@ -2,12 +2,18 @@ import React, { useContext } from 'react'
 import ItemHero from '../ItemHero/ItemHero';
 import ItemCloth from '../ItemCloth/ItemCloth';
 import Jacket1 from '../../assets/jacket1.png';
+import Jacket2 from '../../assets/jacket2.png';
+import Jacket3 from '../../assets/jacket3.png';
 import CartContext from '../../context/Cart-context/cart-context';
 import './ItemContainer.scss';
 function ItemContainer() {
 
     const { addToCart, cart } = useContext(CartContext);
+    const addToCartHandler = (item) => {
 
+        addToCart(item);
+
+    }
     const items = [
         {
             title: 'Campus',
@@ -20,14 +26,14 @@ function ItemContainer() {
             title: 'Campus',
             sale: false,
             price: 132.90,
-            img: Jacket1,
+            img: Jacket2,
             id: 2
         },
         {
             title: 'Campus',
             sale: true,
             price: 132.90,
-            img: Jacket1,
+            img: Jacket3,
             id: 3
         }
     ]
@@ -54,7 +60,7 @@ function ItemContainer() {
                             img={item.img}
                             id={item.id + 1}
                             key={i}
-
+                            click={() => addToCartHandler(item)}
                         >
                         </ItemCloth>
                     </div>

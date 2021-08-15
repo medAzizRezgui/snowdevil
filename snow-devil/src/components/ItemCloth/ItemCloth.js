@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function ItemCloth(props) {
     return (
         <div
-
+            onClick={props.click}
             className="item__cloth">
             <img src={props.img} alt="" className="item__cloth__image" />
             <h4 className="item__cloth__title">{props.title}</h4>

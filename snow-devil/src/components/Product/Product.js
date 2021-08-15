@@ -2,6 +2,8 @@ import React, { useState, useContext } from 'react';
 import Jacket from '../../assets/jacket1.png'
 import CartContext from '../../context/Cart-context/cart-context';
 import Jacket1 from '../../assets/jacket1.png';
+import Jacket2 from '../../assets/jacket2.png';
+import Jacket3 from '../../assets/jacket3.png';
 import { Link } from 'react-router-dom'
 import './Product.scss'
 function Product() {
@@ -17,14 +19,14 @@ function Product() {
             title: 'Campus',
             sale: false,
             price: 132.90,
-            img: Jacket1,
+            img: Jacket2,
             id: 2
         },
         {
             title: 'Campus',
             sale: true,
             price: 132.90,
-            img: Jacket1,
+            img: Jacket3,
             id: 3
         }
     ]
@@ -36,11 +38,7 @@ function Product() {
         setcount(1)
     }
     let popup = null
-    const addToCartHandler = (item) => {
-        setShow(!val)
-        addToCart(item);
 
-    }
     if (show) {
         popup = <p className='popup'>new item added to your cart !</p>
     }
@@ -97,7 +95,6 @@ function Product() {
                     <div className="product__buy__btns">
                         <button
 
-                            onClick={() => addToCartHandler(items[1])}
                             className="add__to__cart">add to cart</button>
                         <button className="buy__it__now">buy it now</button>
                     </div>
