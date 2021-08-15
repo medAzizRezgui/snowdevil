@@ -8,7 +8,7 @@ import CartContext from '../../context/Cart-context/cart-context';
 import './ItemContainer.scss';
 function ItemContainer() {
 
-    const { addToCart, cart } = useContext(CartContext);
+    const { addToCart, cart, setActiveItem } = useContext(CartContext);
     const addToCartHandler = (item) => {
 
         addToCart(item);
@@ -49,7 +49,10 @@ function ItemContainer() {
                     <ItemHero
                         title={'jackets'} />
                 </div>
+
+
                 {items.map((item, i) => (
+
                     <div
                         key={i + 342}
                         className="col-6">
@@ -60,13 +63,13 @@ function ItemContainer() {
                             img={item.img}
                             id={item.id + 1}
                             key={i}
-                            click={() => addToCartHandler(item)}
+                            active={() => setActiveItem(item.id)}
+
+
                         >
                         </ItemCloth>
-                    </div>
-                )
+                    </div>))}
 
-                )}
 
             </div>
         </div>

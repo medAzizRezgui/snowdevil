@@ -6,7 +6,7 @@ import { initialState } from "./CartReducer";
 const CartState = (props) => {
 
 
-
+    const [activeItem, setActiveItem] = useState(null)
     const [state, dispatch] = useReducer(CartReducer, initialState)
 
     const addToCart = (item) => {
@@ -22,12 +22,15 @@ const CartState = (props) => {
             payload: itemID,
         });
     };
+
     return (
         <CartContext.Provider
             value={{
                 cart: state.cart,
                 addToCart,
-                deleteItem
+                deleteItem,
+                activeItem,
+                setActiveItem
             }}
         >
             {props.children}
