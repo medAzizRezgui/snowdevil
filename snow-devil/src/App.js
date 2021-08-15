@@ -5,6 +5,7 @@ import Home from './components/Home/Home';
 import Product from './components/Product/Product';
 import Cart from './components/Cart/Cart';
 import CartState from './context/Cart-context/CartState';
+import ScrollToTop from './hoc/ScrollToTop';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,10 +15,11 @@ import {
 function App() {
   return (
     <CartState>
+
       <Router>
 
         <NavigationBar />
-
+        <ScrollToTop />
         <Switch>
           <Route path="/cart">
             <Cart />
@@ -30,10 +32,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
-
-
-
       </Router>
+
     </CartState>
 
   );

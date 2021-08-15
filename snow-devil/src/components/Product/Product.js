@@ -1,35 +1,11 @@
 import React, { useState, useContext } from 'react';
 import CartContext from '../../context/Cart-context/cart-context';
-import Jacket1 from '../../assets/jacket1.png';
-import Jacket2 from '../../assets/jacket2.png';
-import Jacket3 from '../../assets/jacket3.png';
+
 import { Link } from 'react-router-dom'
 import './Product.scss'
 function Product() {
-    const items = [
-        {
-            title: 'Campus',
-            sale: false,
-            price: 132.90,
-            img: Jacket1,
-            id: 1
-        },
-        {
-            title: 'Campus',
-            sale: false,
-            price: 132.90,
-            img: Jacket2,
-            id: 2
-        },
-        {
-            title: 'Campus',
-            sale: true,
-            price: 132.90,
-            img: Jacket3,
-            id: 3
-        }
-    ]
-    const { addToCart, cart, activeItem } = useContext(CartContext);
+
+    const { addToCart, items, activeItem } = useContext(CartContext);
     const [show, setShow] = useState(false)
     const [count, setcount] = useState(1)
     let val = show;
@@ -63,7 +39,7 @@ function Product() {
                         <div className="product">   {/* Red Box */}
                             <div className="product__info">  {/* Gray Box */}
                                 <p className="product__title">{item.title}</p>
-                                <p className="product__price">{item.price}</p>
+                                <p className="product__price">${item.price}</p>
                             </div>
 
 

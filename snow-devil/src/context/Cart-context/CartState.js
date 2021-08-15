@@ -2,13 +2,45 @@ import CartContext from "./cart-context";
 import CartReducer from "./CartReducer";
 import React, { useState, useReducer } from 'react';
 import { initialState } from "./CartReducer";
-
+import Jacket1 from '../../assets/jacket1.png';
+import Jacket2 from '../../assets/jacket2.png';
+import Jacket3 from '../../assets/jacket3.png';
+import Jacket4 from '../../assets/jacket4.png';
 const CartState = (props) => {
 
 
     const [activeItem, setActiveItem] = useState(null)
     const [state, dispatch] = useReducer(CartReducer, initialState)
-
+    const items = [
+        {
+            title: 'Haze Varsity ',
+            sale: false,
+            price: 132.90,
+            img: Jacket1,
+            id: 1
+        },
+        {
+            title: 'Greed Jacket ',
+            sale: false,
+            price: 152.90,
+            img: Jacket2,
+            id: 2
+        },
+        {
+            title: 'Gala',
+            sale: true,
+            price: 122.90,
+            img: Jacket3,
+            id: 3
+        }
+        , {
+            title: 'Restricted Pole Cat',
+            sale: true,
+            price: 139.96,
+            img: Jacket4,
+            id: 4
+        }
+    ]
     const addToCart = (item) => {
         dispatch({
             type: 'ADD_TO_CART',
@@ -30,7 +62,7 @@ const CartState = (props) => {
                 addToCart,
                 deleteItem,
                 activeItem,
-                setActiveItem
+                setActiveItem, items
             }}
         >
             {props.children}

@@ -8,35 +8,13 @@ import CartContext from '../../context/Cart-context/cart-context';
 import './ItemContainer.scss';
 function ItemContainer() {
 
-    const { addToCart, cart, setActiveItem } = useContext(CartContext);
+    const { addToCart, cart, setActiveItem, items } = useContext(CartContext);
     const addToCartHandler = (item) => {
 
         addToCart(item);
 
     }
-    const items = [
-        {
-            title: 'Campus',
-            sale: false,
-            price: 132.90,
-            img: Jacket1,
-            id: 1
-        },
-        {
-            title: 'Campus',
-            sale: false,
-            price: 132.90,
-            img: Jacket2,
-            id: 2
-        },
-        {
-            title: 'Campus',
-            sale: true,
-            price: 132.90,
-            img: Jacket3,
-            id: 3
-        }
-    ]
+
 
 
 
