@@ -1,24 +1,21 @@
 import React, { useContext } from 'react'
-import ItemHero from '../ItemHero/ItemHero';
-import ItemCloth from '../ItemCloth/ItemCloth';
+import SnowBoardItem from '../SnowBoardItem/SnowBoardItem';
 import CartContext from '../../context/Cart-context/cart-context';
-import './ItemContainer.scss';
-function ItemContainer() {
+import './SnowBoardPage.scss';
+function SnowBoardPage() {
 
-    const { setActiveItem, jackets } = useContext(CartContext);
+    const { setActiveItem, boards } = useContext(CartContext);
 
     return (
-        <div className="container jackets__container">
+        <div className="container items__container">
+            <h2>Snowboards</h2>
             <div className="row row-cols-2 row-cols-sm-4  row-cols-md-6 ">
-                <div className="col-6 stretch">
-                    <ItemHero
-                        title={'jackets'} />
-                </div>
-                {jackets.map((item, i) => (
+
+                {boards.map((item, i) => (
                     <div
                         key={i + 342}
                         className="col-6">
-                        <ItemCloth
+                        <SnowBoardItem
                             title={item.title}
                             sale={item.sale}
                             price={item.price}
@@ -27,11 +24,11 @@ function ItemContainer() {
                             key={i}
                             active={() => setActiveItem(item.id)}
                         >
-                        </ItemCloth>
+                        </SnowBoardItem>
                     </div>))}
             </div>
         </div>
     )
 }
 
-export default ItemContainer
+export default SnowBoardPage

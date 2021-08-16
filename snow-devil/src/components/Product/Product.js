@@ -11,7 +11,7 @@ function Product() {
         window.scrollTo(0, 0);
     }, []);
 
-    const { addToCart, items, activeItem, setItemCount, itemCount } = useContext(CartContext);
+    const { addToCart, jackets, activeItem, setItemCount, itemCount } = useContext(CartContext);
 
 
     const [show, setShow] = useState(false)
@@ -49,7 +49,7 @@ function Product() {
             </Link>
 
             {/* Green Box */}
-            {items.filter(item => item.id === activeItem).map((item, i) => (
+            {jackets.filter(item => item.id === activeItem).map((item, i) => (
                 <div className='container product__container' key={i}>
                     <div className="product__image" key={i} > {/* Red Box */}
                         <img src={item.img} alt="" />
