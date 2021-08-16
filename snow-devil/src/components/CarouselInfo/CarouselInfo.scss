@@ -20,6 +20,10 @@
                 line-height: 1.35;
                 padding: 0 1.5rem;
                 box-decoration-break: clone;
+
+                @include md {
+                    font-size: $Headline-2;
+                }
             }
         }
     }
@@ -64,6 +68,10 @@
             font-family: $karla-font;
             font-weight: 500;
             font-size: $Body;
+
+            @include md {
+                font-size: $Paragraph-1;
+            }
 
             &:hover {
                 word-spacing: 2px;

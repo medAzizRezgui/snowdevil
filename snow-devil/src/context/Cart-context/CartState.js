@@ -9,6 +9,10 @@ import Jacket4 from '../../assets/jacket4.png';
 import Jacket5 from '../../assets/jacket5.png';
 import skate1 from '../../assets/skate1.png';
 import skate2 from '../../assets/skate2.png';
+import skate3 from '../../assets/skate3.png';
+import skate4 from '../../assets/skate4.png';
+import skate5 from '../../assets/skate5.png';
+import skate6 from '../../assets/skate6.png';
 const CartState = (props) => {
 
     const [itemCount, setItemCount] = useState(0);
@@ -61,37 +65,54 @@ const CartState = (props) => {
     ]
     const boards = [
         {
-            title: 'Haze Varsity ',
+            title: 'Trickstick Amptek ',
             sale: true,
-            price: 132.90,
+            price: 262.46,
             img: skate1,
             id: 1,
             count: itemCount
         },
         {
-            title: 'Greed Jacket ',
+            title: 'Tone Snowboard ',
             sale: false,
-            price: 152.90,
+            price: 322.46,
             img: skate2,
             id: 2,
             count: itemCount
         },
         {
-            title: 'Haze Varsity ',
+            title: 'Templar Magtek ',
             sale: true,
-            price: 132.90,
-            img: skate1,
+            price: 399.99,
+            img: skate3,
             id: 3,
             count: itemCount
         },
         {
-            title: 'Greed Jacket ',
+            title: 'Jibsaw Magtek ',
             sale: false,
             price: 152.90,
-            img: skate2,
+            img: skate4,
             id: 4,
             count: itemCount
         },
+        {
+            title: 'Jibsaw Magtek ',
+            sale: false,
+            price: 499.95,
+            img: skate5,
+            id: 5,
+            count: itemCount
+        },
+        {
+            title: ' Circuit Amptek ',
+            sale: false,
+            price: 299.95,
+            img: skate6,
+            id: 6,
+            count: itemCount
+        },
+
 
     ]
     const addToCart = (item) => {

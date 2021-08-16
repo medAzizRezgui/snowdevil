@@ -1,14 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import SnowBoardItem from '../SnowBoardItem/SnowBoardItem';
 import CartContext from '../../context/Cart-context/cart-context';
 import './SnowBoardPage.scss';
 function SnowBoardPage() {
 
     const { setActiveItem, boards } = useContext(CartContext);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div className="container items__container">
-            <h2>Snowboards</h2>
+            <h2 className='snowboard__title'>Snowboards</h2>
             <div className="row row-cols-2 row-cols-sm-4  row-cols-md-6 ">
 
                 {boards.map((item, i) => (

@@ -6,6 +6,7 @@ import Product from './components/Product/Product';
 import Cart from './components/Cart/Cart';
 import CartState from './context/Cart-context/CartState';
 import SnowBoardPage from './components/SnowBoardPage/SnowBoardPage';
+import SkateProduct from './components/SkateProduct/SkateProduct';
 
 import {
 
@@ -24,6 +25,9 @@ function App() {
       <Switch>
         <Route path='/snowboard'>
           <SnowBoardPage />
+        </Route>
+        <Route path='/skateproduct'>
+          <SkateProduct />
         </Route>
         <Route path="/cart">
           <Cart />

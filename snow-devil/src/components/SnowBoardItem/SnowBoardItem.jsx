@@ -10,11 +10,10 @@ function SnowBoardItem(props) {
             <h4 className="item__snowboard__title">{props.title}</h4>
             <span className="item__snowboard__price">${props.price}</span>
             <span className={props.sale ? 'item__snowboard__sale' : null}>{props.sale ? 'Sale' : ''}</span>
-
             <div
                 onClick={props.active}
                 className={"item__snowboard__modal"}>
-                <Link to='/product'>
+                <Link to='/skateproduct'>
                     <p
                         className="view__more">View</p>
                 </Link>

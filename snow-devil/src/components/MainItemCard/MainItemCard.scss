@@ -7,8 +7,11 @@
     align-items: center;
     transition: all 0.3s;
     background-color: white;
-    border: 2px solid white;
+    border: 2px solid rgba(10, 78, 224, 0.178);
+    border-radius: 5px;
+    max-width: 400px;
     cursor: pointer;
+    margin-bottom: 3rem;
 
 
     &:hover {
