@@ -5,21 +5,20 @@ import Home from './components/Home/Home';
 import Product from './components/Product/Product';
 import Cart from './components/Cart/Cart';
 import CartState from './context/Cart-context/CartState';
-import ScrollToTop from './hoc/ScrollToTop';
+import ScrollRestoration from 'react-scroll-restoration'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 
 } from "react-router-dom";
+
 function App() {
   return (
     <CartState>
-
       <Router>
 
         <NavigationBar />
-        <ScrollToTop />
         <Switch>
           <Route path="/cart">
             <Cart />
@@ -33,7 +32,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
     </CartState>
 
   );

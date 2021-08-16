@@ -4,10 +4,12 @@ import CartItem from '../CartItem/CartItem';
 import { Link } from 'react-router-dom'
 import './Cart.scss'
 function Cart() {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
     const { cart } = useContext(CartContext);
-    console.log(cart)
-    let cartState = ''
+
+    let cartState = '';
+    let cartPrice = ''
     if (cart.length === 0) {
         cartState =
             <>
@@ -16,10 +18,32 @@ function Cart() {
                     <p className="cart__empty__btn">continue browsing</p>
                 </Link>
             </>
+        cartPrice = null
     }
     else {
         cartState = null
+        cartPrice = <div className="total__price">
+
+            <p className="price">
+                $ {
+                    cart.map((item) => (
+                        item.price
+                    )).reduce(reducer, 0).toFixed(2)
+
+
+                }
+            </p>
+
+            <p className='total__price__sub'>Taxes and shipping calculated at checkout </p>
+
+            <div className="cart__btns">
+                <button className="update">update cart</button>
+                <button className="checkout">check out</button>
+
+            </div>
+        </div>
     }
+
     return (
         <div className="container cart__container">
             <h1 className="cart__title">Shopping cart</h1>
@@ -42,7 +66,7 @@ function Cart() {
 
                 )}
             </div>
-
+            {cartPrice}
         </div>
     )
 }

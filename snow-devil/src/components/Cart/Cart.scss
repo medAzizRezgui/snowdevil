@@ -33,4 +33,45 @@
         padding: 1rem 5rem;
         margin-bottom: 2rem;
     }
+
+    .total__price {
+        font-family: $karla-font;
+        margin-top: 2rem;
+
+        text-align: center;
+
+        .price {
+            font-size: $Paragraph-1;
+        }
+
+        .total__price__sub {}
+
+        .cart__btns {
+            margin: 2rem 0;
+
+            button {
+                color: white;
+                width: 100%;
+                border-radius: 0;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-family: $karla-font;
+                margin: 5px 0;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.02);
+                }
+            }
+
+            .update {
+                background-color: $main-black;
+            }
+
+            .checkout {
+                background-color: $main-blue
+            }
+        }
+    }
 }
