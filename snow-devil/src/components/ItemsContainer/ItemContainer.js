@@ -8,12 +8,7 @@ import CartContext from '../../context/Cart-context/cart-context';
 import './ItemContainer.scss';
 function ItemContainer() {
 
-    const { addToCart, cart, setActiveItem, items } = useContext(CartContext);
-    const addToCartHandler = (item) => {
-
-        addToCart(item);
-
-    }
+    const { setActiveItem, items } = useContext(CartContext);
 
 
 

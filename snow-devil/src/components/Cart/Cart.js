@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import CartContext from '../../context/Cart-context/cart-context';
 import CartItem from '../CartItem/CartItem';
 import { Link } from 'react-router-dom'
@@ -27,7 +27,7 @@ function Cart() {
             <p className="price">
                 $ {
                     cart.map((item) => (
-                        item.price
+                        item.price * item.count
                     )).reduce(reducer, 0).toFixed(2)
 
 
@@ -59,6 +59,7 @@ function Cart() {
                             img={item.img}
                             id={item.id}
                             key={i}
+                            itemCount={item.count}
                         >
                         </CartItem>
                     </div>

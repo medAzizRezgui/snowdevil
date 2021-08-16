@@ -8,7 +8,10 @@ import Jacket3 from '../../assets/jacket3.png';
 import Jacket4 from '../../assets/jacket4.png';
 const CartState = (props) => {
 
-
+    const [itemCount, setItemCount] = useState(0);
+    if (itemCount < 0) {
+        setItemCount(0)
+    }
     const [activeItem, setActiveItem] = useState(null)
     const [state, dispatch] = useReducer(CartReducer, initialState)
     const items = [
@@ -17,28 +20,32 @@ const CartState = (props) => {
             sale: false,
             price: 132.90,
             img: Jacket1,
-            id: 1
+            id: 1,
+            count: itemCount
         },
         {
             title: 'Greed Jacket ',
             sale: false,
             price: 152.90,
             img: Jacket2,
-            id: 2
+            id: 2,
+            count: itemCount
         },
         {
             title: 'Gala',
             sale: true,
             price: 122.90,
             img: Jacket3,
-            id: 3
+            id: 3,
+            count: itemCount
         }
         , {
             title: 'Restricted Pole Cat',
             sale: true,
             price: 139.96,
             img: Jacket4,
-            id: 4
+            id: 4,
+            count: itemCount
         }
     ]
     const addToCart = (item) => {
@@ -62,7 +69,11 @@ const CartState = (props) => {
                 addToCart,
                 deleteItem,
                 activeItem,
-                setActiveItem, items
+                setActiveItem,
+                items,
+                itemCount,
+                setItemCount
+
             }}
         >
             {props.children}

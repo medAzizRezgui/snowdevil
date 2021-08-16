@@ -5,9 +5,9 @@ import Home from './components/Home/Home';
 import Product from './components/Product/Product';
 import Cart from './components/Cart/Cart';
 import CartState from './context/Cart-context/CartState';
-import ScrollRestoration from 'react-scroll-restoration'
+
 import {
-  BrowserRouter as Router,
+
   Switch,
   Route,
 
@@ -15,23 +15,24 @@ import {
 
 function App() {
   return (
-    <CartState>
-      <Router>
 
-        <NavigationBar />
-        <Switch>
-          <Route path="/cart">
-            <Cart />
-          </Route>
-          <Route path="/product">
-            <Product />
-          </Route>
-          <Route path="/">
-            <Carousel />
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
+    <CartState>
+
+
+      <NavigationBar />
+      <Switch>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/product">
+          <Product />
+        </Route>
+        <Route path="/">
+          <Carousel />
+          <Home />
+        </Route>
+      </Switch>
+
     </CartState>
 
   );
