@@ -1,6 +1,7 @@
 import React from 'react'
 import './Drawer.scss';
-import search from '../../assets/search.svg'
+import search from '../../assets/search.svg';
+import { Link } from 'react-router-dom'
 function Drawer(props) {
     return (
         <div className={props.show ? 'show__drawer' : 'hide__drawer'}>
@@ -11,14 +12,17 @@ function Drawer(props) {
                 </div>
 
                 <ul className="drawer__list">
-                    <li className="drawer__item">Home</li>
+                    <Link to='/'>
+                        <li
+                            onClick={props.close}
+                            className="drawer__item">Home</li>
+                    </Link>
                     <li className="drawer__item">snowboard</li>
                     <li className="drawer__item">Ski</li>
                     <li className="drawer__item">men</li>
                     <li className="drawer__item">women</li>
                     <li className="drawer__item">brands</li>
-                    <li className="drawer__item">accessories</li>
-                    <li className="drawer__item">sales</li>
+
                     <li className="drawer__item">account</li>
 
 

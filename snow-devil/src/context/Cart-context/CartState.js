@@ -6,6 +6,7 @@ import Jacket1 from '../../assets/jacket1.png';
 import Jacket2 from '../../assets/jacket2.png';
 import Jacket3 from '../../assets/jacket3.png';
 import Jacket4 from '../../assets/jacket4.png';
+import Jacket5 from '../../assets/jacket5.png';
 const CartState = (props) => {
 
     const [itemCount, setItemCount] = useState(0);
@@ -17,7 +18,7 @@ const CartState = (props) => {
     const items = [
         {
             title: 'Haze Varsity ',
-            sale: false,
+            sale: true,
             price: 132.90,
             img: Jacket1,
             id: 1,
@@ -33,7 +34,7 @@ const CartState = (props) => {
         },
         {
             title: 'Gala',
-            sale: true,
+            sale: false,
             price: 122.90,
             img: Jacket3,
             id: 3,
@@ -47,7 +48,16 @@ const CartState = (props) => {
             id: 4,
             count: itemCount
         }
+        , {
+            title: 'Juana',
+            sale: false,
+            price: 899.96,
+            img: Jacket5,
+            id: 5,
+            count: itemCount
+        }
     ]
+
     const addToCart = (item) => {
         dispatch({
             type: 'ADD_TO_CART',

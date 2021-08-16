@@ -248,10 +248,11 @@ h6 {
 html {
     // scroll-behavior: smooth;
     font-size: 10px;
+    background-color: white !important;
 }
 
 .section {
-    background-color: $gray-bg;
+    background-color: white;
 
 }
 
@@ -261,7 +262,7 @@ body {
     font-weight: $font-Normal;
     font-family: $inter-font;
     color: #222;
-    background-color: $gray-bg;
+    background-color: white;
 }
 
 ul {

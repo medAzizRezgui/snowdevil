@@ -12,11 +12,19 @@
     padding: 0 !important;
     margin: 0 !important;
 
+    @include md {
+        height: 550px !important;
+    }
+
     .hero__image-1 {
         height: 350px !important;
         object-fit: cover;
         position: absolute;
         z-index: -1;
+
+        @include md {
+            height: 550px !important;
+        }
     }
 
     .container {
@@ -25,6 +33,10 @@
         justify-content: flex-start;
         height: 350px;
         padding-bottom: 3rem;
+
+        @include md {
+            height: 550px !important;
+        }
 
     }
 }

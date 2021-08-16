@@ -6,11 +6,12 @@
 
     .cart__item {
         display: flex;
-
+        border: 2px solid rgba(0, 128, 0, 0.178);
+        border-radius: 10px;
+        margin: 5px 0;
         align-items: center;
         width: 100%;
         padding: 1rem;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         gap: 10px;
 
         .cart__item__image {
@@ -19,7 +20,7 @@
 
         .cart__item__title {
             margin: 0;
-            font-size: $Paragraph-2;
+            font-size: $Body + 0.3rem;
         }
 
         .cart__item__price {
@@ -27,14 +28,22 @@
         }
 
         .remove__cart__item {
-            font-family: $unica-font;
-            color: red;
-            font-weight: bold;
-            text-transform: uppercase;
+            font-family: $karla-font;
+            color: $main-blue;
+            font-weight: 500;
+
             letter-spacing: 1px;
-            font-size: $Paragraph-2;
+            font-size: $Body;
             margin-left: auto;
             cursor: pointer;
+        }
+
+        .cart__item__count {
+
+            position: absolute;
+            right: 10rem;
+
+
         }
     }
 }

@@ -17,8 +17,6 @@ function App() {
   return (
 
     <CartState>
-
-
       <NavigationBar />
       <Switch>
         <Route path="/cart">

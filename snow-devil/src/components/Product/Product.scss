@@ -1,5 +1,6 @@
 @import '../../styles/Variables.scss';
 
+
 .popup {
     color: white;
     background: $main-blue;
@@ -17,12 +18,24 @@
 .product__container {
     background-color: white;
 
-        transition: all ease-in-out;
-     animation: pop 0.5s ease-in-out forwards;
-     scroll-behavior: auto;
+    transition: all ease-in-out;
+    animation: pop 0.5s ease-in-out forwards;
+    scroll-behavior: auto;
+
+    @include md {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: space-between;
+        gap: 80px
+    }
 
     .product__image {
         padding-top: 3rem;
+
+        @include md {
+            max-width: 300px;
+        }
     }
 
     .product {
@@ -34,6 +47,10 @@
         .product__info {
             text-align: center;
             margin-bottom: 2rem;
+
+            @include md {
+                text-align: left;
+            }
 
             .product__title {
                 font-size: $Headline-4;

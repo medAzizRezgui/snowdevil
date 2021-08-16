@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext } from 'react'
 import CartContext from '../../context/Cart-context/cart-context';
 import CartItem from '../CartItem/CartItem';
 import { Link } from 'react-router-dom'
@@ -29,8 +29,6 @@ function Cart() {
                     cart.map((item) => (
                         item.price * item.count
                     )).reduce(reducer, 0).toFixed(2)
-
-
                 }
             </p>
 
@@ -39,7 +37,6 @@ function Cart() {
             <div className="cart__btns">
                 <button className="update">update cart</button>
                 <button className="checkout">check out</button>
-
             </div>
         </div>
     }

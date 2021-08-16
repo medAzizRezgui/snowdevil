@@ -1,10 +1,8 @@
 import './Carousel.scss';
 import React from 'react';
-import { CarouselProvider, Slider, Slide, Image, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Image } from 'pure-react-carousel';
 import CustomSpinner from './CustomSpinner';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import Right from '../../assets/chevron-right.svg';
-import Left from '../../assets/chevron-left.svg';
 import Hero__Image__1 from '../../assets/hero__slide-1.png'
 import Hero__Image__2 from '../../assets/hero__slide-2.png';
 import CarouselInfo from '../CarouselInfo/CarouselInfo';

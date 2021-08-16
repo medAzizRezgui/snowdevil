@@ -5,16 +5,18 @@ import { Link } from 'react-router-dom'
 import './Product.scss'
 function Product() {
 
+
+    // Reset the scroll to the top 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     const { addToCart, items, activeItem, setItemCount, itemCount } = useContext(CartContext);
+
+
     const [show, setShow] = useState(false)
     let val = show;
-
     let popup = null
-
     if (show) {
         popup = <p className='popup'>new item added to your cart !</p>
     }
@@ -94,16 +96,17 @@ function Product() {
                                 className="add__to__cart">add to cart</button>
                             <button className="buy__it__now">buy it now</button>
                         </div>
+                        <div className="product__description">
+                            <ul className="desc__list">
+                                <li className='desc__list__item'>
+                                    Mapped with 3M™ Thinsulate™ Insulation [40G Body / Sleeves / Hood]
+                                </li>
+                                <li className='desc__list__item'>Embossed Taffeta Lining</li>
+                                <li className='desc__list__item'>DRYRIDE Durashell™ 2-Layer Oxford Fabric [10,000MM, 5,000G]</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className="product__description">
-                        <ul className="desc__list">
-                            <li className='desc__list__item'>
-                                Mapped with 3M™ Thinsulate™ Insulation [40G Body / Sleeves / Hood]
-                            </li>
-                            <li className='desc__list__item'>Embossed Taffeta Lining</li>
-                            <li className='desc__list__item'>DRYRIDE Durashell™ 2-Layer Oxford Fabric [10,000MM, 5,000G]</li>
-                        </ul>
-                    </div>
+
                 </div>
 
             ))}
