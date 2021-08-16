@@ -7,7 +7,7 @@ import Cart from './components/Cart/Cart';
 import CartState from './context/Cart-context/CartState';
 import SnowBoardPage from './components/SnowBoardPage/SnowBoardPage';
 import SkateProduct from './components/SkateProduct/SkateProduct';
-
+import Checkout from './components/checkout/Checkout';
 import {
 
   Switch,
@@ -21,8 +21,8 @@ function App() {
     <CartState>
 
       <NavigationBar />
-
-      <Switch>
+      <Checkout />
+      {/* <Switch>
         <Route path='/snowboard'>
           <SnowBoardPage />
         </Route>
@@ -39,7 +39,7 @@ function App() {
           <Carousel />
           <Home />
         </Route>
-      </Switch>
+      </Switch> */}
 
     </CartState>
 
