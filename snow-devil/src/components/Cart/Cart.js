@@ -36,7 +36,9 @@ function Cart() {
 
             <div className="cart__btns">
                 <button className="update">update cart</button>
-                <button className="checkout">check out</button>
+                <Link to='/checkout'>
+                    <button className="checkout">check out</button>
+                </Link>
             </div>
         </div>
     }

@@ -1,6 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Shipping.scss'
 function Shipping() {
+    const [show, setshow] = useState(false)
+
+    let succ = ''
+    if (show) {
+        succ = <div className="payment__modal">
+            <div className="modal checkout__modal"></div>
+            <div className="payment__success">
+                <p className="success__message">
+                    Payment Successful !
+
+                </p>
+                <div className="check__icon">
+                    <div class="success-checkmark">
+                        <div class="check-icon">
+                            <span class="icon-line line-tip"></span>
+                            <span class="icon-line line-long"></span>
+                            <div class="icon-circle"></div>
+                            <div class="icon-fix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    else {
+        succ = ''
+    }
+
+
     return (
         <div className="container payment__container">
             <h1 className="payment__title"> Payment </h1>
@@ -18,7 +47,10 @@ function Shipping() {
 
                 </div>
             </div>
-            <button className="pay">Pay now</button>
+            <button
+                onClick={() => setshow(true)}
+                className="pay">Pay now</button>
+            {succ}
         </div>
     )
 }

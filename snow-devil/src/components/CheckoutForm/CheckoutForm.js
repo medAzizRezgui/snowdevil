@@ -1,5 +1,6 @@
 import React from 'react'
 import './CheckoutForm.scss'
+import { Link } from 'react-router-dom'
 function CheckoutForm() {
     return (
         <div className='container form__container'>
@@ -265,8 +266,9 @@ function CheckoutForm() {
                 <p className="save__info">Save this information for the next time</p>
                 <input type="checkbox" className='checkbox' />
             </div>
-            <button className="info">Continue to shipping</button>
-
+            <Link to='/payment'>
+                <button className="info">Continue to shipping</button>
+            </Link>
         </div>
     )
 }
