@@ -1,0 +1,62 @@
+@import '../../styles/Variables.scss';
+
+.payment__container {
+    .pay {
+        width: 100%;
+        color: white;
+        font-family: $karla-font;
+        border: none;
+        border-radius: 5px;
+        background-color: $main-blue;
+        padding: 2rem;
+    }
+
+    .payment__title {
+        font-size: $Paragraph-2;
+        text-align: left;
+        font-weight: 500;
+        font-family: $karla-font;
+        margin: 1rem 0;
+    }
+
+    .payment__subtitle {
+        font-size: $Body;
+        text-align: left;
+        font-weight: 500;
+        font-family: $karla-font;
+        margin: 1rem 0;
+    }
+
+    .payment__box {
+        border: 1px solid rgba(0, 0, 0, 0.212);
+        border-radius: 5px;
+        margin: 2rem 0;
+
+        .box__heading {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1rem;
+
+            .box__title {}
+
+            .ccv {
+                width: 50px;
+            }
+        }
+
+        .payment__inputs {
+            padding: 1rem 2rem;
+
+            .payment__form {
+                width: 100%;
+                padding: 1rem;
+                border-radius: 5px;
+                border: 1px solid rgba(128, 128, 128, 0.342);
+                margin: 0.8rem 0;
+                font-family: $karla-font;
+            }
+        }
+    }
+}

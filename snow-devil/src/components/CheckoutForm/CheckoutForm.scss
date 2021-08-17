@@ -1,0 +1,58 @@
+@import '../../styles/Variables.scss';
+
+.form__container {
+    .form__title {
+        font-size: $Paragraph-2;
+        text-align: left;
+        font-weight: 500;
+        font-family: $karla-font;
+        margin: 1rem 0;
+    }
+
+    .checkout__form {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 5px;
+        border: 1px solid rgba(128, 128, 128, 0.342);
+        margin: 0.8rem 0;
+        font-family: $karla-font;
+    }
+
+    .countries {
+        width: 100%;
+        font-family: $karla-font;
+        padding: 1rem;
+        margin: 0.8rem 0;
+        background-color: white;
+        border-radius: 5px;
+        border: 1px solid rgba(128, 128, 128, 0.342);
+
+        option {
+            background-color: white;
+        }
+
+    }
+
+    .save {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 5px;
+        padding: 2rem 0;
+
+        .save__info {}
+
+        .checkbox {}
+    }
+
+    .info {
+        width: 100%;
+        color: white;
+        font-family: $karla-font;
+        border: none;
+        border-radius: 5px;
+        background-color: $main-blue;
+        padding: 2rem;
+    }
+}
