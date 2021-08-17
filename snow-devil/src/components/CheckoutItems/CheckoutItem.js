@@ -16,7 +16,7 @@ function CheckoutItem() {
     }
     let gift = ''
     if (pop) {
-        gift = <p className='gift__text'>A gift wil be added, enjoy!</p>
+        gift = <p className='gift__text'>A gift will be added, enjoy!</p>
     }
     else {
         gift = ''
