@@ -35,7 +35,11 @@ function Cart() {
             <p className='total__price__sub'>Taxes and shipping calculated at checkout </p>
 
             <div className="cart__btns">
-                <button className="update">update cart</button>
+                <Link to='/'>
+
+                    <button className="update">update cart</button>
+
+                </Link>
                 <Link to='/checkout'>
                     <button className="checkout">check out</button>
                 </Link>

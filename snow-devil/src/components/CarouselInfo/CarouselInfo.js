@@ -1,6 +1,7 @@
 import './CarouselInfo.scss';
 import React from 'react';
 import { ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { Link } from 'react-router-dom';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import Right from '../../assets/chevron-right.svg';
 import Left from '../../assets/chevron-left.svg';
@@ -23,7 +24,10 @@ function CarouselInfo(props) {
                     className='carousel__btn '>
                     <img src={Right} alt="" className="carousel__icon" />
                 </ButtonNext>
-                <a href="/" className='hero__slide__1__shopping'>{props.shopping} →</a>
+                <Link to='snowboard'>
+                    <p className='hero__slide__1__shopping'>{props.shopping} →</p>
+                </Link>
+
             </div>
         </div>
     )

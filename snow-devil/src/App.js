@@ -10,6 +10,8 @@ import SkateProduct from './components/SkateProduct/SkateProduct';
 import Checkout from './components/checkout/Checkout';
 import CheckoutForm from './components/CheckoutForm/CheckoutForm';
 import Shipping from './components/Shipping/Shipping';
+import AccessoriesPage from './components/AccessoriesPage/AccessoriesPage';
+import AccessoriesProduct from './components/AccessoriesProduct/AccessoriesProduct';
 import {
 
   Switch,
@@ -25,6 +27,9 @@ function App() {
       <NavigationBar />
 
       <Switch>
+        <Route path='/accessories'>
+          <AccessoriesPage />
+        </Route>
         <Route path='/checkout'>
           <Checkout />
           <CheckoutForm />
@@ -38,6 +43,9 @@ function App() {
         </Route>
         <Route path='/skateproduct'>
           <SkateProduct />
+        </Route>
+        <Route path='/accessoriesproduct'>
+          <AccessoriesProduct />
         </Route>
         <Route path="/cart">
           <Cart />

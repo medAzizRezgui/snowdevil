@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './CheckoutItem.scss'
-import Jacket5 from '../../assets/jacket5.png';
+import CartContext from '../../context/Cart-context/cart-context';
+import CheckoutSingleItem from '../CheckoutSingleItem/CheckoutSingleItem';
 
 function CheckoutItem() {
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    const { cart } = useContext(CartContext);
     const [active, setactive] = useState(false)
     const [show, setshow] = useState(false)
     const [pop, setPop] = useState(false)
@@ -31,19 +35,24 @@ function CheckoutItem() {
         checkoutItems = <div className="outer__container">
             <div className="container checkout__container">
                 <div className="checkout__items">
-                    <div className="checkout__item">
-                        <span className="circle__count">4</span>
-                        <img src={Jacket5} alt="" className="checkout__item__image" />
-                        <div className="checkout__item__info">
-                            <div className="checkout__item__info__text">
-                                <p className="checkout__item__info__text__title">Some jacket</p>
-                                <p className="checkout__item__info__text__subtitle">Some jacket info</p>
 
-                            </div>
+                    {cart.map((item, i) => (
 
-                        </div>
-                        <p className="checkout__item__price">$1449</p>
-                    </div>
+
+
+                        <CheckoutSingleItem
+                            title={item.title}
+                            price={item.price}
+                            image={item.img}
+                            id={item.id}
+                            key={i}
+                            count={item.count}
+                        >
+                        </CheckoutSingleItem>
+
+                    )
+
+                    )}
 
                     <div className="checkout__gift">
                         <div className="checkout__gift__cta">
@@ -60,7 +69,11 @@ function CheckoutItem() {
 
                     <div className="checkout__total">
                         <span className="title">Total</span>
-                        <span className="total__price">$1.581.98</span>
+                        <span className="total__price">$ {
+                            cart.map((item) => (
+                                item.price * item.count
+                            )).reduce(reducer, 0).toFixed(2)
+                        }</span>
                     </div>
                 </div>
             </div>
@@ -81,7 +94,11 @@ function CheckoutItem() {
                             className="show__order__subtitle">Show order summary</p>
                         <img src="" alt="" className="show__order__arrow" />
                     </div>
-                    <div className="show__order__price">$1999</div>
+                    <div className="show__order__price">$ {
+                        cart.map((item) => (
+                            item.price * item.count
+                        )).reduce(reducer, 0).toFixed(2)
+                    }</div>
                 </div>
             </div>
             {checkoutItems}

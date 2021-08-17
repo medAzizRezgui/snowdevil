@@ -19,18 +19,23 @@ function MainCardContainer() {
                         />
                     </div>
                 </Link>
+
+
+
                 <div className="col-12 col-md-4 stretch">
                     <MainItemCard
                         title={'ski'}
                         image={Boots}
                     />
                 </div>
-                <div className="col-12 col-md-4 stretch">
-                    <MainItemCard
-                        title={'accessories'}
-                        image={Hat}
-                    />
-                </div>
+                <Link to='accessories'>
+                    <div className="col-12 col-md-4 stretch">
+                        <MainItemCard
+                            title={'accessories'}
+                            image={Hat}
+                        />
+                    </div>
+                </Link>
             </div>
         </div>
 

@@ -17,12 +17,20 @@ function Drawer(props) {
                             onClick={props.close}
                             className="drawer__item">Home</li>
                     </Link>
-                    <li className="drawer__item">snowboard</li>
-                    <li className="drawer__item">Ski</li>
+                    <Link to='/snowboard'>
+                        <li
+                            onClick={props.close}
+                            className="drawer__item">snowboard</li>
+                    </Link>
+
+                    <Link to='/accessories'>
+                        <li
+                            onClick={props.close}
+                            className="drawer__item">Accessories</li>
+                    </Link>
                     <li className="drawer__item">men</li>
                     <li className="drawer__item">women</li>
                     <li className="drawer__item">brands</li>
-
                     <li className="drawer__item">account</li>
 
 

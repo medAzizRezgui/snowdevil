@@ -13,6 +13,20 @@ import skate3 from '../../assets/skate3.png';
 import skate4 from '../../assets/skate4.png';
 import skate5 from '../../assets/skate5.png';
 import skate6 from '../../assets/skate6.png';
+import accs1 from '../../assets/accs1.png';
+
+import accs2 from '../../assets/accs2.png';
+import accs3 from '../../assets/accs3.png';
+
+import accs4 from '../../assets/accs4.png';
+import accs5 from '../../assets/accs5.png';
+import accs6 from '../../assets/accs6.png';
+
+
+
+
+
+
 const CartState = (props) => {
 
     const [itemCount, setItemCount] = useState(0);
@@ -115,12 +129,64 @@ const CartState = (props) => {
 
 
     ]
+    const accessories = [
+        {
+            title: 'Tracker ',
+            sale: true,
+            price: 49.95,
+            img: accs1,
+            id: 1,
+            count: itemCount
+        },
+        {
+            title: 'Cupcake',
+            sale: false,
+            price: 28.00,
+            img: accs2,
+            id: 2,
+            count: itemCount
+        },
+        {
+            title: 'Leah ',
+            sale: true,
+            price: 26.00,
+            img: accs3,
+            id: 3,
+            count: itemCount
+        },
+        {
+            title: 'Character ',
+            sale: false,
+            price: 32.00,
+            img: accs4,
+            id: 4,
+            count: itemCount
+        },
+        {
+            title: 'Factory Park Glove',
+            sale: false,
+            price: 40.00,
+            img: accs5,
+            id: 5,
+            count: itemCount
+        },
+        {
+            title: ' Tracker ',
+            sale: false,
+            price: 34.96,
+            img: accs6,
+            id: 6,
+            count: itemCount
+        },
+
+    ]
     const addToCart = (item) => {
         dispatch({
             type: 'ADD_TO_CART',
             payload: item,
         })
     }
+
     // Delete a todo
     const deleteItem = (itemID) => {
         dispatch({
@@ -139,7 +205,7 @@ const CartState = (props) => {
                 setActiveItem,
                 jackets,
                 itemCount,
-                boards,
+                boards, accessories,
                 setItemCount
 
             }}
